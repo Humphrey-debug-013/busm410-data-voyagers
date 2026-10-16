@@ -4,10 +4,9 @@
 
 | Item | Details |
 | --- | --- |
-| Fun team name | Data Voyagers |
-| Canvas team number | To be completed |
+| Canvas team number | Data Voyagers |
 | Team member 1 | John Humphrey Valiente — GitHub: `Humphrey-debug-013` |
-| Team member 2 | To be completed |
+| Team member 2 | Kalenn Brodien |
 | Selected dataset | To be completed |
 | BigQuery project ID | To be completed |
 | IAM screenshot | To be added |
