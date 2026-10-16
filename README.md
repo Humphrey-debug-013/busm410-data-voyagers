@@ -4,7 +4,8 @@
 
 | Item | Details |
 | --- | --- |
-| Canvas team number | Data Voyagers |
+| Fun team name | Data Voyagers |
+| Canvas team number | To be completed |
 | Team member 1 | John Humphrey Valiente — GitHub: `Humphrey-debug-013` |
 | Team member 2 | Kalenn Brodien |
 | Selected dataset | To be completed |
