@@ -5,7 +5,7 @@
 | Item | Details |
 | --- | --- |
 | Fun team name | Data Voyagers |
-| Canvas team number | To be completed |
+| Canvas team number | 5 (originally Group 5; now named Data Voyagers) |
 | Team member 1 | John Humphrey Valiente — GitHub: `Humphrey-debug-013` |
 | Team member 2 | Kalenn Brodien |
 | Selected dataset | To be completed |
@@ -27,7 +27,7 @@ These files are CP0 setup placeholders. Analysis and audit results have not been
 
 - [ ] Both partners have joined the same Canvas team.
 - [x] The fun team name is recorded above.
-- [ ] The Canvas team number is recorded above.
+- [x] The Canvas team number is recorded above.
 - [ ] The dataset choice is recorded and its availability is confirmed.
 - [ ] The BigQuery project is created and its project ID is recorded above.
 - [ ] The partner has Editor access to the BigQuery project.
