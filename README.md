@@ -25,7 +25,7 @@ These files are CP0 setup placeholders. Analysis and audit results have not been
 
 ## CP0 setup checklist
 
-- [ ] Both partners have joined the same Canvas team.
+- [x] Both partners have joined the same Canvas team.
 - [x] The fun team name is recorded above.
 - [x] The Canvas team number is recorded above.
 - [ ] The dataset choice is recorded and its availability is confirmed.
