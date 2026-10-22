@@ -7,7 +7,7 @@
 | Fun team name | Data Voyagers |
 | Canvas team number | 5 (originally Group 5; now named Data Voyagers) |
 | Team member 1 | John Humphrey Valiente — GitHub: `Humphrey-debug-013` |
-| Team member 2 | Kalenn Brodien |
+| Team member 2 | Kalenn Brodien — GitHub: `Qa-l-e` |
 | Selected dataset | `bigquery-public-data.cms_medicare` — Healthcare |
 | Starting table | `inpatient_charges_2015` |
 | BigQuery project ID | `dotted-lexicon-509700-t8` |
@@ -45,5 +45,5 @@ These files provide the CP0 setup structure. Analysis and audit results have not
 - [ ] The instructor has Viewer access to the BigQuery project.
 - [ ] The IAM screenshot is uploaded and linked above.
 - [x] This project is in the public GitHub repository `busm410-data-voyagers`.
-- [ ] The partner has collaborator access to the GitHub repository.
+- [x] The partner has collaborator access to the GitHub repository.
 - [ ] The public repository link is submitted in Canvas.
