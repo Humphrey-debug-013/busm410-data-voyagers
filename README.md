@@ -22,14 +22,22 @@ We selected the CMS Medicare dataset and will start with `bigquery-public-data.c
 
 The public source data is hosted in `bigquery-public-data`. Our own Google Cloud project is `dotted-lexicon-509700-t8`. A sample access-check query is in [SQL notes](sql/notes.md); its execution has not yet been verified.
 
-## Project files
+## Explore the work
 
-- [Team charter](charter.md)
-- [Audit protocol](audit_protocol.md)
-- [Audit log](audit_log.md)
-- [SQL notes](sql/notes.md)
-- [Model notes](model/notes.md)
-- [Visualization notes](visuals/notes.md)
+| File or link | What it's for |
+| --- | --- |
+| [charter.md](charter.md) | Team charter, question, scope, and intended decision |
+| [findings.md](findings.md) | Future findings, charts, and recommendations; currently pending |
+| [sql/](sql/README.md) | Query documentation and the existing access-check notes |
+| [model/](model/notes.md) | Model notes and the [model card](model/model_card.md) placeholder |
+| [visuals/](visuals/notes.md) | Visualization notes; charts are pending |
+| [Other/](Other/README.md) | Audit records and space for project-specific reference documents |
+| [AGENTS.md](AGENTS.md) | Project facts and working instructions for AI assistance |
+| [Other/audit_protocol.md](Other/audit_protocol.md) | Audit protocol placeholder |
+| [Other/audit_log.md](Other/audit_log.md) | Audit log; no results recorded yet |
+| [Audit skill](.agents/skills/project-audit/SKILL.md) | Guidance for recording actual human checks of AI work |
+| [Other/CLAUDE.md](Other/CLAUDE.md) | Points to the shared project instructions |
+| [.gitignore](.gitignore) | Excludes local credentials and temporary files from future uploads |
 
 These files provide the CP0 setup structure. Analysis and audit results have not been completed.
 
@@ -47,3 +55,15 @@ These files provide the CP0 setup structure. Analysis and audit results have not
 - [x] This project is in the public GitHub repository `busm410-data-voyagers`.
 - [x] The partner has collaborator access to the GitHub repository.
 - [ ] The public repository link is submitted in Canvas.
+
+## Problem framing
+
+To be completed by the team. The selected topic is Medicare inpatient hospital charges for 2015. A specific analysis question, intended decision, and findings have not yet been recorded.
+
+## Check the numbers
+
+The [sample access check](sql/01_access_check.sql) matches the query already recorded in [SQL notes](sql/notes.md). Its execution has not yet been verified. No analysis results, workbook, or completed charts have been recorded.
+
+## Who did the work
+
+John Humphrey Valiente and Kalenn Brodien are the team members listed above. AI assistance was used to align this repository's structure and document formatting with the [instructor example](https://github.com/jakebramwell/busm410-instructor-example). This formatting work did not run the sample query or perform data analysis.

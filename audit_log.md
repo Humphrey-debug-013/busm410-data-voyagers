@@ -1,6 +1,3 @@
 # Audit Log
 
-CP0 placeholder. No audit results have been recorded yet.
-
-| Date | Reviewer | Item checked | Method or evidence | Result | Follow-up |
-| --- | --- | --- | --- | --- | --- |
+The audit log is now in [Other/audit_log.md](Other/audit_log.md), following the instructor's folder layout.
