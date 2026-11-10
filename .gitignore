@@ -6,3 +6,10 @@ desktop.ini
 .env
 credentials.json
 service-account*.json
+
+# Local data extracts and scratch databases
+*.csv
+*.xlsx
+*.xls
+*.sqlite
+*.db

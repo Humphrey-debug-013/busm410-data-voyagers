@@ -14,32 +14,29 @@
 | Class dataset reservation | Pending confirmation (maximum two teams per dataset) |
 | IAM screenshot | To be added after project access is verified |
 
-## Dataset
+## Problem framing
 
-We selected the CMS Medicare dataset and will start with `bigquery-public-data.cms_medicare.inpatient_charges_2015`. Each row represents one hospital's charges for one type of treatment in 2015, as described in the course dataset list.
-
-[Open the selected table in BigQuery](https://console.cloud.google.com/bigquery?ws=!1m6!1m5!4m3!1sbigquery-public-data!2scms_medicare!3sinpatient_charges_2015!23sWS_URL_PARAM&project=dotted-lexicon-509700-t8).
-
-The public source data is hosted in `bigquery-public-data`. Our own Google Cloud project is `dotted-lexicon-509700-t8`. A sample access-check query is in [SQL notes](sql/notes.md); its execution has not yet been verified.
+In FY2015, Hawaiʻi hospitals reported **$47,984.03** in discharge-weighted average covered charges for major hip and knee joint replacement (MS-DRG 470), versus **$57,888.71** at other reporting providers in the same service group. That is **$9,904.68 lower per discharge (17.1%)**. At Hawaiʻi's **914 reported discharges**, the difference was about **$9.05 million in billed charges** relative to the peer rate. Each source row summarizes one hospital and one DRG. This comparison describes charges, not costs, payments, or savings.
 
 ## Explore the work
 
 | File or link | What it's for |
 | --- | --- |
-| [charter.md](charter.md) | Team charter, question, scope, and intended decision |
-| [findings.md](findings.md) | Future findings, charts, and recommendations; currently pending |
-| [sql/](sql/README.md) | Query documentation and the existing access-check notes |
-| [model/](model/notes.md) | Model notes and the [model card](model/model_card.md) placeholder |
-| [visuals/](visuals/notes.md) | Visualization notes; charts are pending |
-| [Other/](Other/README.md) | Audit records and space for project-specific reference documents |
-| [AGENTS.md](AGENTS.md) | Project facts and working instructions for AI assistance |
-| [Other/audit_protocol.md](Other/audit_protocol.md) | Audit protocol placeholder |
-| [Other/audit_log.md](Other/audit_log.md) | Audit log; no results recorded yet |
-| [Audit skill](.agents/skills/project-audit/SKILL.md) | Guidance for recording actual human checks of AI work |
-| [Other/CLAUDE.md](Other/CLAUDE.md) | Points to the shared project instructions |
-| [.gitignore](.gitignore) | Excludes local credentials and temporary files from future uploads |
+| [Charter](charter.md) | Question, manager's decision, scope, and success criteria |
+| [Findings](findings.md) | Gap, peer benchmark, dollar calculation, and chart |
+| [SQL guide](sql/README.md) | How the data was loaded, checked, and analyzed |
+| [01: Access check](sql/01_access_check.sql) | Original unverified BigQuery access check |
+| [02: Data quality](sql/02_quality.sql) | Missing fields, invalid values, and duplicate checks |
+| [03: Gap and value](sql/03_gap.sql) | Discharge-weighted charges and the dollar comparison |
+| [Gap chart](visuals/gap_chart.png) and [visual notes](visuals/notes.md) | Visual comparison of Hawaiʻi and peers |
+| [Dataset documentation](Other/README.md) | Official CMS download, field definitions, and methodology |
+| [Table diagram](Other/inpatient_2015.svg) and [DBML](Other/inpatient_2015.dbml) | One hospital-by-DRG table; no joins |
+| [Agent instructions](AGENTS.md) | Project facts, cleaning rules, and instructions |
+| [Audit protocol](Other/audit_protocol.md) and [proposed additions](Other/audit_protocol_cp1_draft.md) | Existing protocol and CP1 steps for team approval |
+| [Audit log](Other/audit_log.md) and [audit skill](.agents/skills/project-audit/SKILL.md) | Human review categories and instructions |
+| [Model notes](model/notes.md) and [model card](model/model_card.md) | Placeholders for a later checkpoint |
 
-These files provide the CP0 setup structure. Analysis and audit results have not been completed.
+The numbers come from the official FY2015 CMS download and were reproduced by running the numbered analysis SQL locally. See the [SQL guide](sql/README.md) for the distinction between this release and the selected BigQuery mirror. AI assisted with analysis and documentation; human audit checks are still pending.
 
 ## CP0 setup checklist
 
@@ -55,15 +52,3 @@ These files provide the CP0 setup structure. Analysis and audit results have not
 - [x] This project is in the public GitHub repository `busm410-data-voyagers`.
 - [x] The partner has collaborator access to the GitHub repository.
 - [ ] The public repository link is submitted in Canvas.
-
-## Problem framing
-
-To be completed by the team. The selected topic is Medicare inpatient hospital charges for 2015. A specific analysis question, intended decision, and findings have not yet been recorded.
-
-## Check the numbers
-
-The [sample access check](sql/01_access_check.sql) matches the query already recorded in [SQL notes](sql/notes.md). Its execution has not yet been verified. No analysis results, workbook, or completed charts have been recorded.
-
-## Who did the work
-
-John Humphrey Valiente and Kalenn Brodien are the team members listed above. AI assistance was used to align this repository's structure and document formatting with the [instructor example](https://github.com/jakebramwell/busm410-instructor-example). This formatting work did not run the sample query or perform data analysis.

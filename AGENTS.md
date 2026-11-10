@@ -18,14 +18,17 @@ BUSM 410 semester project: Data Voyagers. Read [README.md](README.md) for curren
 - Starting table: `bigquery-public-data.cms_medicare.inpatient_charges_2015`.
 - Google Cloud project: `dotted-lexicon-509700-t8`.
 - Course-listed row meaning: one hospital's charges for one type of treatment.
-- Sample access query: prepared, execution not yet verified.
-- Analysis and audit results have not been completed. See the README checklist for remaining CP0 items.
+- CP1 source: official FY2015 CMS Medicare Inpatient Hospitals by Provider and Service public release, linked in [Other/README.md](Other/README.md). Steps 2–3 ran locally in SQLite; the BigQuery access check and mirror equivalence remain unverified.
+- Grain: one hospital (CMS Certification Number) and MS-DRG; one source table, no joins. Used fields: provider ID, DRG code, provider state, total discharges, and average submitted covered charge.
+- Cleaning: preserve leading zeros; require populated keys and state, positive discharges, and nonnegative charges. Exclude repeated provider/DRG keys rather than double-counting. Of 199,807 source rows, none had missing required fields or invalid amounts/counts, and none of the 2,682 DRG 470 rows had duplicate provider keys. No dates or event-level records exist in the projection.
+- Gap: FY2015 DRG 470 Hawaiʻi (10 providers, 914 discharges), $47,984.03 per discharge versus $57,888.71 for other reporting providers (2,672 providers, 470,849 discharges). Rates are weighted by discharge counts. Difference: $9,904.68 per discharge (17.1%) and about $9.05 million at Hawaiʻi's observed volume.
+- Sources and calculations: [CMS documentation](Other/README.md), [SQL results and method](sql/README.md), and [findings](findings.md). These are billed charges, not actual payments, costs, or savings.
 
 ## File organization
 
 - `charter.md`: team charter, question, scope, and intended decision.
 - `findings.md`: verified findings and recommendations when available.
-- `sql/`: queries and documentation; retain existing notes.
+- `sql/`: numbered queries and documentation.
 - `model/`: notes and model card placeholder.
 - `visuals/`: charts and visualization notes.
 - `Other/`: audit records and project-specific references.
@@ -34,7 +37,7 @@ Use numbered SQL filenames and explain each query's purpose, estimated scan, res
 
 ## Audit records
 
-Use [project-audit guidance](.agents/skills/project-audit/SKILL.md) when recording human checks. Preserve the CP0 status until actual checks occur. The audit protocol remains a placeholder for the team to complete.
+Use [project-audit guidance](.agents/skills/project-audit/SKILL.md) when recording human checks. Only record actual human checks. The [proposed CP1 protocol](Other/audit_protocol_cp1_draft.md) is pending team approval.
 
 ## Publishing
 

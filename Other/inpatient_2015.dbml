@@ -1,0 +1,13 @@
+Table inpatient_2015 {
+  provider_id varchar [not null, note: 'CMS Certification Number; keep leading zeros']
+  drg_code varchar [not null, note: 'Medicare Severity Diagnosis Related Group code']
+  provider_state varchar [not null, note: 'State of the hospital, not patient residence']
+  discharges integer [not null, note: 'Qualifying reported discharges']
+  avg_covered_charge decimal [not null, note: 'Average billed covered charge in US dollars']
+
+  indexes {
+    (provider_id, drg_code) [pk]
+  }
+
+  Note: 'FY2015 CMS provider-and-service release; projection of five analysis fields. One hospital × DRG. No joins. Candidate key checked within DRG 470.'
+}

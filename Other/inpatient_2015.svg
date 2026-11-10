@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-labelledby="t d">
+  <title id="t">FY2015 CMS inpatient analysis table</title>
+  <desc id="d">One table, no joins. Provider ID and DRG code form the candidate key.</desc>
+  <rect width="760" height="360" fill="#f3f7fa"/>
+  <rect x="36" y="30" width="688" height="300" rx="12" fill="#fff" stroke="#b9cbd6"/>
+  <path d="M48 30h664q12 0 12 12v45H36V42q0-12 12-12" fill="#165c67"/>
+  <g font-family="Segoe UI, sans-serif" font-size="19" fill="#172d40">
+    <text x="58" y="66" fill="#fff" font-size="23" font-weight="bold">inpatient_2015 · CMS FY2015</text>
+    <text x="58" y="123">provider_id</text><text x="376" y="123">Text · key part 1</text>
+    <text x="58" y="160">drg_code</text><text x="376" y="160">Text · key part 2</text>
+    <text x="58" y="197">provider_state</text><text x="376" y="197">Text · hospital location</text>
+    <text x="58" y="234">discharges</text><text x="376" y="234">Integer · count of discharges</text>
+    <text x="58" y="271">avg_covered_charge</text><text x="376" y="271">Decimal · dollars per discharge</text>
+    <text x="58" y="308" font-size="17">One row per hospital and DRG. No joins used.</text>
+  </g>
+</svg>
