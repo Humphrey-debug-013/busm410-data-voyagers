@@ -18,6 +18,8 @@
 
 In FY2015, Hawaiʻi hospitals reported **$47,984.03** in discharge-weighted average covered charges for major hip and knee joint replacement (MS-DRG 470), versus **$57,888.71** at other reporting providers in the same service group. That is **$9,904.68 lower per discharge (17.1%)**. At Hawaiʻi's **914 reported discharges**, the difference was about **$9.05 million in billed charges** relative to the peer rate. Each source row summarizes one hospital and one DRG. This comparison describes charges, not costs, payments, or savings.
 
+**Value calculation.** ($57,888.705583 − $47,984.029540) × 914 discharges ≈ **$9,052,874** in billed charges at Hawaiʻi's reported volume. Both weighted rates come from the [official CMS FY2015 provider and service release](https://data.cms.gov/sites/default/files/2023-05/81895338-4c5c-4ad7-a490-8e5a9a972825/MUP_IHP_RY23_P03_V10_DY15_PRVSVC.CSV).
+
 ## Explore the work
 
 | File or link | What it's for |
@@ -32,7 +34,7 @@ In FY2015, Hawaiʻi hospitals reported **$47,984.03** in discharge-weighted aver
 | [Dataset documentation](Other/README.md) | Official CMS download, field definitions, and methodology |
 | [Table diagram](Other/inpatient_2015.svg) and [DBML](Other/inpatient_2015.dbml) | One hospital-by-DRG table; no joins |
 | [Agent instructions](AGENTS.md) | Project facts, cleaning rules, and instructions |
-| [Audit protocol](Other/audit_protocol.md) and [proposed additions](Other/audit_protocol_cp1_draft.md) | Existing protocol and CP1 steps for team approval |
+| [Audit protocol](Other/audit_protocol.md) | How the team reviews AI-assisted work |
 | [Audit log](Other/audit_log.md) and [audit skill](.agents/skills/project-audit/SKILL.md) | Human review categories and instructions |
 | [Model notes](model/notes.md) and [model card](model/model_card.md) | Placeholders for a later checkpoint |
 

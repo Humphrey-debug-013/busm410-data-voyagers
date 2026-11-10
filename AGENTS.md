@@ -37,7 +37,7 @@ Use numbered SQL filenames and explain each query's purpose, estimated scan, res
 
 ## Audit records
 
-Use [project-audit guidance](.agents/skills/project-audit/SKILL.md) when recording human checks. Only record actual human checks. The [proposed CP1 protocol](Other/audit_protocol_cp1_draft.md) is pending team approval.
+Use [project-audit guidance](.agents/skills/project-audit/SKILL.md) when recording human checks. Only record actual human checks. Follow the [approved CP1 audit protocol](Other/audit_protocol.md).
 
 ## Publishing
 

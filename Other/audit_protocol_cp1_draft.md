@@ -1,6 +1,6 @@
 # Proposed CP1 audit protocol additions
 
-Team approval pending. The [existing audit protocol](audit_protocol.md) stays in place until the team approves these additions.
+Approved for CP1. See the [active audit protocol](audit_protocol.md).
 
 1. Check the data dictionary for row grain and the meaning of covered charges.
 2. Review the cleaning counts and whether the peer group excludes Hawaiʻi.

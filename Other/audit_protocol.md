@@ -1,11 +1,9 @@
-# Audit Protocol
+# Audit Protocol — CP1
 
-CP0 placeholder. The team will complete this document at a later checkpoint.
+Use these checks to review AI-assisted work before relying on the results.
 
-## Checks to perform
-
-To be completed after reviewing the selected dataset.
-
-## Evidence and review process
-
-To be completed. Record completed checks and their results in `audit_log.md`.
+1. Check the data dictionary for row grain and the meaning of covered charges.
+2. Review the cleaning counts and whether the peer group excludes Hawaiʻi.
+3. Rerun or independently recalculate the weighted rates and multiply the unrounded gap by 914.
+4. Check that the chart and write-up use the same numbers and distinguish charges from savings.
+5. Record the human check and its evidence in the corresponding [audit log](audit_log.md) category.
