@@ -17,12 +17,9 @@ BUSM 410 semester project: Data Voyagers. Read [README.md](README.md) for curren
 - Dataset: `bigquery-public-data.cms_medicare`.
 - Starting table: `bigquery-public-data.cms_medicare.inpatient_charges_2015`.
 - Google Cloud project: `dotted-lexicon-509700-t8`.
-- Course-listed row meaning: one hospital's charges for one type of treatment.
-- CP1 source: official FY2015 CMS Medicare Inpatient Hospitals by Provider and Service public release, linked in [Other/README.md](Other/README.md). Steps 2–3 ran locally in SQLite; the BigQuery access check and mirror equivalence remain unverified.
-- Grain: one hospital (CMS Certification Number) and MS-DRG; one source table, no joins. Used fields: provider ID, DRG code, provider state, total discharges, and average submitted covered charge.
-- Cleaning: preserve leading zeros; require populated keys and state, positive discharges, and nonnegative charges. Exclude repeated provider/DRG keys rather than double-counting. Of 199,807 source rows, none had missing required fields or invalid amounts/counts, and none of the 2,682 DRG 470 rows had duplicate provider keys. No dates or event-level records exist in the projection.
-- Gap: FY2015 DRG 470 Hawaiʻi (10 providers, 914 discharges), $47,984.03 per discharge versus $57,888.71 for other reporting providers (2,672 providers, 470,849 discharges). Rates are weighted by discharge counts. Difference: $9,904.68 per discharge (17.1%) and about $9.05 million at Hawaiʻi's observed volume.
-- Sources and calculations: [CMS documentation](Other/README.md), [SQL results and method](sql/README.md), and [findings](findings.md). These are billed charges, not actual payments, costs, or savings.
+- One row represents one hospital and one DRG. The analysis uses provider ID, provider state, DRG definition, and total discharges.
+- BigQuery FY2015 DRG 470: 606 of 933 Hawaiʻi discharges at the three busiest hospitals, out of 11 reporting hospitals. The equally weighted six-state benchmark is 55.51%. The gap is 9.44 percentage points, about 88 discharges at observed volume.
+- Peer states have 7–13 reporting hospitals. Exclude missing provider IDs or states, nonpositive counts, and repeated provider IDs. The BigQuery run excluded zero rows. See [SQL](sql/README.md) and [findings](findings.md).
 
 ## File organization
 

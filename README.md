@@ -16,9 +16,7 @@
 
 ## Problem framing
 
-In FY2015, Hawaiʻi hospitals reported **$47,984.03** in discharge-weighted average covered charges for major hip and knee joint replacement (MS-DRG 470), versus **$57,888.71** at other reporting providers in the same service group. That is **$9,904.68 lower per discharge (17.1%)**. At Hawaiʻi's **914 reported discharges**, the difference was about **$9.05 million in billed charges** relative to the peer rate. Each source row summarizes one hospital and one DRG. This comparison describes charges, not costs, payments, or savings.
-
-**Value calculation.** ($57,888.705583 − $47,984.029540) × 914 discharges ≈ **$9,052,874** in billed charges at Hawaiʻi's reported volume. Both weighted rates come from the [official CMS FY2015 provider and service release](https://data.cms.gov/sites/default/files/2023-05/81895338-4c5c-4ad7-a490-8e5a9a972825/MUP_IHP_RY23_P03_V10_DY15_PRVSVC.CSV).
+In FY2015, Hawaiʻi's three busiest reporting hospitals handled 606 of 933 reported Medicare discharges for major hip and knee joint replacement and related procedures (MS-DRG 470). Their share was **64.95%**, compared with **55.51%** across six peer states, a **9.44 percentage-point gap**. At Hawaiʻi's reported volume, 606 − (0.55510273 × 933) ≈ **88 discharges** above the benchmark. One source row summarizes one hospital and procedure group. [BigQuery job](https://console.cloud.google.com/bigquery?project=dotted-lexicon-509700-t8&ws=!1m5!1m4!1m3!1sdotted-lexicon-509700-t8!2sjob_DCi7jdoLi48Vf761S2josruw4P7L!3sUS)
 
 ## Explore the work
 
@@ -27,10 +25,8 @@ In FY2015, Hawaiʻi hospitals reported **$47,984.03** in discharge-weighted aver
 | [Charter](charter.md) | Question, manager's decision, scope, and success criteria |
 | [Findings](findings.md) | Gap, peer benchmark, dollar calculation, and chart |
 | [SQL guide](sql/README.md) | How the data was loaded, checked, and analyzed |
-| [01: Access check](sql/01_access_check.sql) | Original unverified BigQuery access check |
-| [02: Data quality](sql/02_quality.sql) | Missing fields, invalid values, and duplicate checks |
-| [03: Gap and value](sql/03_gap.sql) | Discharge-weighted charges and the dollar comparison |
-| [Gap chart](visuals/gap_chart.png) and [visual notes](visuals/notes.md) | Visual comparison of Hawaiʻi and peers |
+| [BigQuery analysis](sql/04_volume_concentration.sql) | Query used for the revised gap |
+| [Gap chart](visuals/gap_chart.svg) and [visual notes](visuals/notes.md) | Visual comparison of Hawaiʻi and peers |
 | [Dataset documentation](Other/README.md) | Official CMS download, field definitions, and methodology |
 | [Table diagram](Other/inpatient_2015.svg) and [DBML](Other/inpatient_2015.dbml) | One hospital-by-DRG table; no joins |
 | [Agent instructions](AGENTS.md) | Project facts, cleaning rules, and instructions |
@@ -38,7 +34,7 @@ In FY2015, Hawaiʻi hospitals reported **$47,984.03** in discharge-weighted aver
 | [Audit log](Other/audit_log.md) and [audit skill](.agents/skills/project-audit/SKILL.md) | Human review categories and instructions |
 | [Model notes](model/notes.md) and [model card](model/model_card.md) | Placeholders for a later checkpoint |
 
-The numbers come from the official FY2015 CMS download and were reproduced by running the numbered analysis SQL locally. See the [SQL guide](sql/README.md) for the distinction between this release and the selected BigQuery mirror. AI assisted with analysis and documentation; human audit checks are still pending.
+The revision uses BigQuery results. Human audit checks are recorded when reported by the team.
 
 ## CP0 setup checklist
 

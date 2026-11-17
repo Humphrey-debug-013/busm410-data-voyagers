@@ -2,19 +2,19 @@
 
 ## The question
 
-In FY2015, how did Hawaiʻi hospitals' discharge-weighted average covered charge for major hip and knee joint replacement (MS-DRG 470) compare with other reporting providers, and what dollar difference does that imply at Hawaiʻi's reported volume?
+Did Hawaiʻi's three busiest reporting hospitals handle a larger share of FY2015 MS-DRG 470 Medicare discharges than the top three in similarly sized state reporting groups?
 
-## The decision this project supports
+## The decision this supports
 
-A Hawaiʻi hospital finance manager can decide whether to investigate how covered charges are set for this procedure group and whether to request a more comparable hospital-level review before considering any change.
+A hospital network planner can decide whether to investigate backup capacity and referral arrangements for joint replacement.
 
 ## Scope
 
-Use the FY2015 CMS Medicare Inpatient Hospitals by Provider and Service public release. One source row represents one hospital and one diagnosis-related group (DRG), summarizing qualifying Original Medicare fee-for-service discharges. Compare reporting Hawaiʻi providers with all reporting providers outside Hawaiʻi for DRG 470. Use discharge counts as weights. No other years, joins, payment estimates, or patient-level claims are in scope.
+Use the BigQuery public CMS Medicare FY2015 inpatient table. One source row represents one hospital and one DRG. Compare Hawaiʻi with other states with 7–13 reporting hospitals for DRG 470, giving each peer state equal weight. CMS suppresses low-volume hospital and procedure combinations.
 
 ## What success looks like
 
-- Another reader can reproduce the group counts, charges, and difference from the numbered SQL and source instructions.
-- The benchmark uses the same year and DRG, excludes Hawaiʻi, and states its limitations.
-- One chart shows the two discharge-weighted averages with their units.
-- The dollar comparison uses unrounded rates and reported Hawaiʻi discharges and is clearly distinguished from cost, payment, and savings.
+- Reproduce hospital and discharge counts in BigQuery.
+- Explain the peer group and compare the top-three shares.
+- Express the gap in percentage points and equivalent discharges at Hawaiʻi's reported volume.
+- Show a chart and explain the limits for capacity planning.

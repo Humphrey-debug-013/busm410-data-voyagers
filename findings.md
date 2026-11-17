@@ -1,26 +1,21 @@
-# Findings — FY2015 inpatient charges
+# Findings — Joint replacement discharge concentration
 
-## The gap
+In FY2015, Hawaiʻi's three busiest reporting hospitals handled 606 of 933 reported Medicare discharges for major hip and knee joint replacement and related procedures (MS-DRG 470). Their share was **64.95%**, compared with **55.51%** across six peer states, a **9.44 percentage-point gap**. At Hawaiʻi's reported volume, 606 − (0.55510273 × 933) ≈ **88 discharges** above the benchmark. One source row summarizes one hospital and procedure group.
 
-For major hip and knee joint replacement or reattachment of lower extremity without major complication or comorbidity (MS-DRG 470), Hawaiʻi's discharge-weighted average covered charge was **$47,984.03**, versus **$57,888.71** among other reporting providers. Hawaiʻi was **$9,904.68 per discharge lower (17.1%)**. One source row summarizes one hospital's discharges for one DRG.
+![Gap chart](visuals/gap_chart.svg)
 
-| Cohort | Reporting providers | Reported discharges | Covered charge per discharge |
-| --- | ---: | ---: | ---: |
-| Hawaiʻi | 10 | 914 | $47,984.03 |
-| Other reporting providers | 2,672 | 470,849 | $57,888.71 |
+## Peer benchmark
 
-## The benchmark
+Use the equally weighted mean for other states with 7–13 reporting hospitals. The range was set before querying, around the 10 hospitals seen in the earlier CMS extract. BigQuery returned 11 Hawaiʻi hospitals. Comparing similarly sized reporting groups limits the mechanical effect of counting the top three out of very different numbers of hospitals.
 
-Pool the reported discharges of providers outside Hawaiʻi for the same FY2015 DRG. This is a peer comparison that holds the service classification and year fixed and avoids including Hawaiʻi in its own benchmark. Weight each provider's average charge by its discharges so each reported discharge has equal weight.
+| State | Reporting hospitals | Top-three discharges | Total discharges | Share |
+| --- | ---: | ---: | ---: | ---: |
+| Hawaiʻi | 11 | 606 | 933 | 64.95% |
+| Alaska | 7 | 567 | 783 | 72.41% |
+| Idaho | 13 | 1,261 | 2,751 | 45.84% |
+| Montana | 12 | 993 | 2,214 | 44.85% |
+| New Hampshire | 13 | 1,359 | 2,770 | 49.06% |
+| Rhode Island | 10 | 973 | 1,395 | 69.75% |
+| Wyoming | 9 | 334 | 653 | 51.15% |
 
-## Value
-
-**About $9.05 million in lower billed charges relative to the peer rate:** ($57,888.705583 − $47,984.029540) × 914 ≈ **$9,052,874**. Both unit amounts come from the [CMS FY2015 public release](https://data.cms.gov/sites/default/files/2023-05/81895338-4c5c-4ad7-a490-8e5a9a972825/MUP_IHP_RY23_P03_V10_DY15_PRVSVC.CSV). No external unit price is used. Multiplying published average charges by volume estimates aggregate charges; source averages are rounded. This is a descriptive comparison at fixed volume, not a payment, cost, or savings estimate.
-
-![Gap chart](visuals/gap_chart.png)
-
-## What the comparison can support
-
-Investigate how the Hawaiʻi providers set charges for this DRG before making any pricing decision. The release omits low-volume hospital/DRG combinations under CMS reporting rules. A same-DRG comparison does not adjust for hospital characteristics, geography, or differences among patients within the DRG. Charges are amounts billed, not amounts paid or costs to deliver care. This historical snapshot does not describe current pricing or establish a cause.
-
-See [query notes](sql/README.md), [source documentation](Other/README.md), and the [charter](charter.md).
+At the peer share, about 518 of Hawaiʻi's 933 reported discharges would have been at its three busiest hospitals. The difference of about 88 discharges gives a network planner a scale for investigating backup capacity. This historical comparison measures concentration in reported Medicare volume. An assessment of actual spare capacity would need current hospital-level information. CMS suppresses hospital and procedure combinations with 10 or fewer discharges. [CMS documentation](https://data.cms.gov/provider-summary-by-type-of-service/medicare-inpatient-hospitals/medicare-inpatient-hospitals-by-provider-and-service) · [BigQuery job](https://console.cloud.google.com/bigquery?project=dotted-lexicon-509700-t8&ws=!1m5!1m4!1m3!1sdotted-lexicon-509700-t8!2sjob_DCi7jdoLi48Vf761S2josruw4P7L!3sUS)
